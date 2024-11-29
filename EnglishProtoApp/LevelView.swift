@@ -25,7 +25,7 @@ struct LevelView: View {
                     .cornerRadius(10)
                     .padding(.horizontal)
 
-                // Level Image (Optional)
+                // Level Image
                 if let imageName = levelImageName {
                     Image(imageName)
                         .resizable()
@@ -93,13 +93,11 @@ struct LevelView: View {
         .navigationBarTitle("Level \(level)", displayMode: .inline)
     }
 
-    // Computed property for level image name
     var levelImageName: String? {
         let imageName = "level\(level)Image"
         return UIImage(named: imageName) != nil ? imageName : nil
     }
 
-    // Computed property for level descriptions
         var levelDescription: String {
             switch level {
             case 1:
@@ -524,9 +522,7 @@ struct LevelView: View {
         ]
     }
 
-    // Continue adding similar blocks for levels 3 to 20.
-
-    // Placeholder for default questions
+    // Placeholder for default questions for testing
     var defaultQuestions: [QuizQuestion] {
         return [
             QuizQuestion(question: "Default question?", options: ["Option A", "Option B"], correctAnswer: "Option A")
