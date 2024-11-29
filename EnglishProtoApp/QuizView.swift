@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuizView: View {
-    let level: Int // Include the level to customize background color
+    let level: Int 
     var questions: [QuizQuestion]
     var onQuizCompleted: (Bool) -> Void
 
@@ -40,7 +40,7 @@ struct QuizView: View {
                     .cornerRadius(10)
                     .padding(.horizontal)
             }
-            .frame(maxHeight: 200) // Adjust as needed
+            .frame(maxHeight: 200)
             .padding(.horizontal)
 
             // Options
@@ -86,7 +86,7 @@ struct QuizView: View {
 
             Spacer()
         }
-        .background(backgroundColor.edgesIgnoringSafeArea(.all)) // Set background color
+        .background(backgroundColor.edgesIgnoringSafeArea(.all)) 
         .alert(isPresented: $showResultAlert) {
             if currentQuestionIndex < questions.count - 1 {
                 return Alert(
@@ -96,7 +96,7 @@ struct QuizView: View {
                     })
                 )
             } else {
-                // Last question answered, show final score
+                // if last question answered, show final score
                 return Alert(
                     title: Text("Quiz Completed"),
                     message: Text("You scored \(correctAnswersCount) out of \(questions.count)"),
