@@ -36,7 +36,7 @@ struct FillInTheBlankView: View {
                     .background(Color.lightBrown)
                     .cornerRadius(10)
             }
-            // **Insert Image Here**
+            // used image would be here
                         Image("imageName")
                             .resizable()
                             .scaledToFit()
@@ -69,8 +69,6 @@ struct FillInTheBlankView: View {
         if currentQuestionIndex + 1 < questions.count {
             currentQuestionIndex += 1
         } else {
-            // Activity completed
-            // Handle completion (e.g., show final score)
         }
     }
 }
