@@ -42,7 +42,7 @@ struct MainMenuView: View {
                         .padding(.horizontal)
                 }
 
-                // Blitz Mode Button (Placeholder)
+                // Blitz Mode Button placeholder (mode to be added)
                 NavigationLink(destination: BlitzModeView()) {
                     Text("Blitz Mode")
                         .boldRoundedBrownText(size: 24)
@@ -85,7 +85,7 @@ struct MainMenuView: View {
                         .cornerRadius(10)
                         .padding(.horizontal)
                 }
-                .padding(.top, 20) // Add some space above the settings button
+                .padding(.top, 20) // some space above the settings button
 
                 Spacer()
             }
