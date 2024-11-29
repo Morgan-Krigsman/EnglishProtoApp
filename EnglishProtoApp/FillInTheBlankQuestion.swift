@@ -9,6 +9,6 @@ import Foundation
 
 struct FillInTheBlankQuestion: Identifiable {
     let id = UUID()
-    let sentence: String // Use underscores or placeholders for blanks
+    let sentence: String 
     let correctWord: String
 }
