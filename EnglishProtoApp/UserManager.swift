@@ -62,8 +62,7 @@ class UserManager: ObservableObject {
         if var user = currentUser {
             if user.unlockedLevels == currentLevel && user.unlockedLevels < 20 {
                 user.unlockedLevels += 1
-                currentUser = user // Reassign to trigger @Published
-                // No need to call saveUser() here; didSet on currentUser handles it
+                currentUser = user 
             }
         }
     }
@@ -73,7 +72,7 @@ class UserManager: ObservableObject {
             if !user.achievements.contains(where: { $0.name == name }) {
                 if let achievement = AchievementsManager.shared.achievements.first(where: { $0.name == name }) {
                     user.achievements.append(achievement)
-                    currentUser = user // Reassign to trigger @Published
+                    currentUser = user 
                 }
             }
         }
