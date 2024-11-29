@@ -21,7 +21,6 @@ struct ProgressReportView: View {
                     .font(.headline)
                     .padding()
 
-                // Add more detailed progress metrics if desired
             } else {
                 Text("No user data available.")
                     .padding()
